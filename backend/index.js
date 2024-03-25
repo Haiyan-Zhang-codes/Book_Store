@@ -14,14 +14,14 @@ const DB_URL = process.env.DB_URL
 const app = express()
 
 // Allow all origins with Default of cors
-// app.use(cors())
+app.use(cors())
 
 // Allow Custom Origins
-app.use(cors({
-    origin: 'http://localhost:3000',
-    method: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type'],
-}))
+// app.use(cors({
+//     origin: 'http://localhost:3000',
+//     method: ['GET', 'POST', 'PUT', 'DELETE'],
+//     allowedHeaders: ['Content-Type'],
+// }))
 
 app.use(express.urlencoded({extended:true}));
 app.use(express.json())
